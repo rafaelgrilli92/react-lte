@@ -1,21 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+//import { Provider } from 'react-redux';
 
-import App from 'components/App';
+// Redux
+//import configureStore from 'store/configureStore'
 
-// CSS
-import 'styles/index.css';
+// All Scripts and Styles
+import 'containers/Scripts'
 
-// CSS Libs
-import 'bootstrap/dist/css/bootstrap.min.css';
+// Routes
+import Routes from 'containers/Routes'
 
-import 'font-awesome/css/font-awesome.min.css';
-
-import 'admin-lte/dist/css/AdminLTE.min.css';
-import 'admin-lte/dist/css/skins/_all-skins.min.css';
+//var store = configureStore();
 
 
 ReactDOM.render(
-  <App />,
+	<Routes />,
   document.getElementById('root')
 );
