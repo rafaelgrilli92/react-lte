@@ -6,6 +6,7 @@ import ContentHeader from 'components/layout/ContentHeader';
 import ContentBody from 'components/layout/ContentBody';
 
 // Widgets
+import Box from 'components/widgets/Box';
 import InfoBox from 'components/widgets/InfoBox';
 import SmallBox from 'components/widgets/SmallBox';
 
@@ -56,6 +57,7 @@ export default class Widgets extends Component {
             </div>
           </div>
           { /* END INFO BOX FULL COLERED */ }
+          { /* SMALL BOX */ }
           <div className="row">
             <div className="col-lg-3 col-xs-6">
               <SmallBox title="150" text="New Orders" icon="shopping-cart">
@@ -78,6 +80,55 @@ export default class Widgets extends Component {
               </SmallBox>
             </div>
           </div>
+          { /* END SMALL BOX */ }
+          { /* BOX */ }
+          <div className="row">
+            <div className="col-lg-3 col-md-6 col-md col-xs-12">
+              <Box title="Collapsed" icon="window-maximize" collapsable={true} collapsed={true} color="primary">
+                The body of the box
+              </Box>
+            </div>
+            <div className="col-lg-3 col-md-6 col-xs-12">
+              <Box title="Collapsable" icon="window-minimize" collapsable={true} color="warning">
+                The body of the box
+              </Box>
+            </div>
+            <div className="col-lg-3 col-md-6 col-xs-12">
+              <Box title="Removable" icon="remove" color="success" removable={true}>
+                The body of the box
+              </Box>
+            </div>
+            <div className="col-lg-3 col-md-6 col-xs-12">
+              <Box title="Loading State" icon="refresh" color="danger" isLoading={true}>
+                The body of the box
+              </Box>
+            </div>
+          </div>
+          { /* END BOX */ }
+        { /* BOX SOLID */ }
+          <div className="row">
+            <div className="col-lg-3 col-md-6 col-xs-12">
+              <Box title="Collapsed" icon="window-maximize" color="primary" collapsable={true} collapsed={true} solidColor={true}>
+                The body of the box
+              </Box>
+            </div>
+            <div className="col-lg-3 col-md-6 col-xs-12">
+              <Box title="Collapsable" icon="window-minimize" color="warning" collapsable={true} solidColor={true}>
+                The body of the box
+              </Box>
+            </div>
+            <div className="col-lg-3 col-md-6 col-xs-12">
+              <Box title="Removable" icon="remove" color="success" solidColor={true} removable={true}>
+                The body of the box
+              </Box>
+            </div>
+            <div className="col-lg-3 col-md-6 col-xs-12">
+              <Box title="Loading State" icon="refresh" color="danger" solidColor={true} isLoading={true}>
+                The body of the box
+              </Box>
+            </div>
+          </div>
+          { /* END BOX SOLID */ }
         </ContentBody>
       </div>
     );
