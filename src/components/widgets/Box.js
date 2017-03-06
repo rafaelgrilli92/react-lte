@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 export default class InfoBox extends Component {
   PropTypes = {
-    color: React.PropTypes.string, // default, primary, warning, danger
-    collapsable: React.PropTypes.bool,
-    collapsed: React.PropTypes.bool,
-    icon: React.PropTypes.string, // just font-awesome name e.g.: envelope-o
-    isLoading: React.PropTypes.bool,
-    removable: React.PropTypes.bool,
-    solidColor: React.PropTypes.bool,
-    title: React.PropTypes.string
+    color: PropTypes.string, // default, primary, warning, danger
+    collapsable: PropTypes.bool,
+    collapsed: PropTypes.bool,
+    icon: PropTypes.string, // just font-awesome name e.g.: envelope-o
+    isLoading: PropTypes.bool,
+    removable: PropTypes.bool,
+    solidColor: PropTypes.bool,
+    title: PropTypes.string
   }
 
   render() {

@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 
 export default class SmallBox extends Component {
   PropTypes = {
-    color: React.PropTypes.string, // aqua (default), green, yellow, red
-    icon: React.PropTypes.string, // just font-awesome name e.g.: envelope-o
-    title: React.PropTypes.string.isRequired,
-    text: React.PropTypes.string.isRequired
+    color: PropTypes.string, // aqua (default), green, yellow, red
+    icon: PropTypes.string, // just font-awesome name e.g.: envelope-o
+    title: PropTypes.string.isRequired,
+    text: PropTypes.string.isRequired
   }
 
   render() {
