@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 
-let collapsable, collapsed, removable;
+import Icon from 'components/popular/Icon';
+
+var collapsable, collapsed, removable;
 
 export default class Box extends Component {
   PropTypes = {
@@ -11,13 +13,11 @@ export default class Box extends Component {
     solidColor: PropTypes.bool
   }
 
-  componentWillMount() {
+  render() {
     collapsable = this.props.collapsable;
     collapsed = this.props.collapsed;
     removable = this.props.removable;
-  }
-
-  render() {
+    
     let { 
       color = 'default', 
       isLoading,
@@ -27,7 +27,7 @@ export default class Box extends Component {
     return (
       <div className={"box box-" + color + (solidColor ? " box-solid" : "") + (collapsed ? " collapsed-box" : "")}>
         { this.props.children }
-        { isLoading && (<div className="overlay"><i className="fa fa-refresh fa-spin"></i></div>) }
+        { isLoading && (<div className="overlay"><Icon name="refresh" spin={true}/></div>) }
       </div>
     );
   }
@@ -51,11 +51,11 @@ export class BoxHeader extends Component {
         <div className="box-tools pull-right">
           {
             removable ? (
-              <button type="button" className="btn btn-box-tool" data-widget="remove"><i className="fa fa-times"></i></button>
+              <button type="button" className="btn btn-box-tool" data-widget="remove"><Icon name="times" /></button>
             ) : (
               collapsable && (
                 <button type="button" className="btn btn-box-tool" data-widget="collapse">
-                  <i className={"fa fa-" + (collapsed ? "plus" : "minus")}></i>
+                  <Icon name={(collapsed ? "plus" : "minus")}/>
                 </button>
               )
             )

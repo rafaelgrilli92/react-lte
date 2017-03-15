@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
+import Icon from 'components/popular/Icon';
+
 export default class SmallBox extends Component {
   PropTypes = {
     color: PropTypes.string, // aqua (default), green, yellow, red
@@ -25,7 +27,7 @@ export default class SmallBox extends Component {
         {
           icon !== null && (
             <div className="icon">
-              <i className={"fa fa-" + icon}></i>
+              <Icon name={icon} />
             </div>
           )
         }

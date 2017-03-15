@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
+import Icon from 'components/popular/Icon';
+
 export default class ContentHeader extends Component {
 	PropTypes = {
 		breadcrumb: PropTypes.bool, 
@@ -37,7 +39,7 @@ export default class ContentHeader extends Component {
 	      {
 	      	breadcrumb && (
 	      		<ol className="breadcrumb">
-			        <li><Link to="/"><i className="fa fa-dashboard"></i> Home</Link></li>
+			        <li><Link to="/"><Icon name="dashboard" /> Home</Link></li>
 	      			{ this.renderBreadcrumbs() }
 			      </ol>
 	      	)

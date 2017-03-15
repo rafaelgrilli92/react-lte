@@ -5,9 +5,9 @@ import { browserHistory, IndexRoute, Router, Route } from 'react-router';
 import App from 'components/App';
 
 // Views
-import Home from 'components/views/Home';
+import Home from 'views/Home';
 //import Dashboard1 from 'components/views/Dashboard1';
-import Widgets from 'components/views/Widgets';
+import Widgets from 'views/Widgets';
 
 class Routes extends Component {
 	render() {
