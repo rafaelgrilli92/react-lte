@@ -9,7 +9,7 @@ export default class SmallBox extends Component {
   }
 
   render() {
-    var { 
+    let { 
       color = 'aqua',
       icon, 
       title, 
@@ -29,15 +29,18 @@ export default class SmallBox extends Component {
             </div>
           )
         }
-        {
-          this.props.children !== null && (
-            <div className="small-box-footer">
-              { this.props.children }
-            </div>
-          )
-        }
+        { this.props.children }
       </div>
     );
   }
 }
 
+export class SmallBoxFooter extends Component {
+  render() {
+    return (
+      <div className="small-box-footer">
+        { this.props.children }
+      </div>
+    );
+  }
+}

@@ -10,7 +10,7 @@ export default class InfoBox extends Component {
   }
 
   render() {
-    var { 
+    let { 
       color = 'aqua', 
       fullColored,
       icon, 
