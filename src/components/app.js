@@ -3,7 +3,7 @@ import { Link, IndexLink } from 'react-router';
 
 import Avatar from 'images/avatar.png';
 
-import Icon from 'components/popular/icon';
+import Icon from 'components/uiElements/icon';
 import Navbar from 'components/layout/Navbar';
 import SideBar, { SideBarMenu, SideBarSubMenu, SideBarItem } from 'components/layout/SideBar';
 

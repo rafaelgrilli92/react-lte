@@ -10,7 +10,7 @@ import Box, { BoxHeader, BoxBody, BoxFooter } from 'components/widgets/box';
 import InfoBox from 'components/widgets/infoBox';
 import SmallBox, { SmallBoxFooter } from 'components/widgets/smallBox';
 
-import Button from 'components/uiElements/button';
+import Input from 'components/forms/input';
 
 export default class Widgets extends Component {
   render() {
@@ -22,13 +22,11 @@ export default class Widgets extends Component {
         <br />
         <div className="row">
           <div className="col-xs-12">
-            
+            <Input type="text" onChange={(e) => console.log(e.target.value)} placeholder="Digite aqui" />
           </div>
         </div>
         <br />
         <br />
-
-
 
           { /* INFO BOX */ }
           <div className="row">

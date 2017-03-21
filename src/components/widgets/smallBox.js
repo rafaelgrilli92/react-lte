@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-import Icon from 'components/popular/icon';
+import Icon from 'components/uiElements/icon';
 
 const SmallBox = ({children, color = 'aqua', icon, title, text}) => {
   return (

@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-import Icon from 'components/popular/icon';
+import Icon from 'components/uiElements/icon';
 
 var _collapsable, _collapsed, _removable;
 
