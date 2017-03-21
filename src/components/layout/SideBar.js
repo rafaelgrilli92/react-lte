@@ -46,9 +46,7 @@ export class SideBarSubMenu extends Component {
     return (
        <li className="treeview">
         <a href="#">
-          <span> 
-            { icon ? (<Icon name={icon} fixedWidth={true} />) : "" }&nbsp;{ text }
-          </span>
+            { icon ? (<Icon name={icon} fixedWidth={true} />) : "" }&nbsp;<span>{ text }</span>
           <span className="pull-right-container">
             <Icon name="angle-right" pull="right" />
           </span>

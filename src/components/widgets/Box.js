@@ -2,86 +2,68 @@ import React, { Component, PropTypes } from 'react';
 
 import Icon from 'components/popular/Icon';
 
-var collapsable, collapsed, removable;
+var _collapsable, _collapsed, _removable;
 
-export default class Box extends Component {
-  PropTypes = {
-    color: PropTypes.string, // default, primary, warning, danger
-    collapsed: PropTypes.bool,
-    isLoading: PropTypes.bool,
-    removable: PropTypes.bool,
-    solidColor: PropTypes.bool
-  }
-
-  render() {
-    collapsable = this.props.collapsable;
-    collapsed = this.props.collapsed;
-    removable = this.props.removable;
-    
-    let { 
-      color = 'default', 
-      isLoading,
-      solidColor
-    } = this.props;
-
-    return (
-      <div className={"box box-" + color + (solidColor ? " box-solid" : "") + (collapsed ? " collapsed-box" : "")}>
-        { this.props.children }
-        { isLoading && (<div className="overlay"><Icon name="refresh" spin={true}/></div>) }
-      </div>
-    );
-  }
+const Box = ({children, collapsable, collapsed, color, isLoading, removable, solidColor}) => {
+  _collapsable = collapsable;
+  _collapsed = collapsed;
+  _removable = removable;
+  return (
+    <div className={"box box-" + color + (solidColor ? " box-solid" : "") + (_collapsed ? " collapsed-box" : "")}>
+      { children }
+      { isLoading && (<div className="overlay"><Icon name="refresh" modifier="fa-spin"/></div>) }
+    </div>
+  );
 }
+Box.propTypes = {
+  color: PropTypes.string, // default, primary, warning, danger
+  collapsable: PropTypes.bool,
+  collapsed: PropTypes.bool,
+  isLoading: PropTypes.bool,
+  removable: PropTypes.bool,
+  solidColor: PropTypes.bool
+}
+export default Box;
 
-export class BoxHeader extends Component {
-  PropTypes = {
-    border: PropTypes.bool,
-    collapsable: PropTypes.bool,
-    collapsed: PropTypes.bool
-  }
 
-  render() {
-    let { border = true } = this.props;
-
-    return (
-      <div className={"box-header" + (border ? " with-border" : "")}>
-        <h3 className="box-title">
-          { this.props.children }
-        </h3>
-        <div className="box-tools pull-right">
-          {
-            removable ? (
-              <button type="button" className="btn btn-box-tool" data-widget="remove"><Icon name="times" /></button>
-            ) : (
-              collapsable && (
-                <button type="button" className="btn btn-box-tool" data-widget="collapse">
-                  <Icon name={(collapsed ? "plus" : "minus")}/>
-                </button>
-              )
+const BoxHeader = ({children, bordered = true}) => {
+  return (
+    <div className={"box-header" + (bordered ? " with-border" : "")}>
+      <h3 className="box-title">
+        { children }
+      </h3>
+      <div className="box-tools pull-right">
+        {
+          _removable ? (
+            <button type="button" className="btn btn-box-tool" data-widget="remove"><Icon name="times" /></button>
+          ) : (
+            _collapsable && (
+              <button type="button" className="btn btn-box-tool" data-widget="collapse">
+                <Icon name={(_collapsed ? "plus" : "minus")}/>
+              </button>
             )
-          }
-        </div>
+          )
+        }
       </div>
-    );
-  }
+    </div>
+  );
+}
+BoxHeader.propTypes = { bordered: PropTypes.bool };
+
+const BoxBody = ({children}) => {
+  return (
+    <div className="box-body">
+      { children }
+    </div>
+  );
 }
 
-export class BoxBody extends Component {
-  render() {
-    return (
-      <div className="box-body">
-        { this.props.children }
-      </div>
-    );
-  }
+const BoxFooter = ({children}) => {
+  return (
+    <div className="box-footer">
+      { children }
+    </div>
+  );
 }
 
-export class BoxFooter extends Component {
-  render() {
-    return (
-      <div className="box-footer">
-        { this.props.children }
-      </div>
-    );
-  }
-}
+export { BoxHeader, BoxBody };
