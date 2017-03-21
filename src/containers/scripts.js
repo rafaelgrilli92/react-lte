@@ -1,5 +1,5 @@
 // CSS
-import 'styles/index.css';
+import 'styles/App.scss';
 
 // CSS Libs
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap

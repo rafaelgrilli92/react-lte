@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Link, IndexLink } from 'react-router';
 
-import 'styles/App.css';
-
 import Avatar from 'images/avatar.png';
 
 import Icon from 'components/popular/icon';
