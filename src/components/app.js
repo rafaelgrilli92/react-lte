@@ -5,7 +5,7 @@ import 'styles/App.css';
 
 import Avatar from 'images/avatar.png';
 
-import Icon from 'components/popular/Icon';
+import Icon from 'components/popular/icon';
 import Navbar from 'components/layout/Navbar';
 import SideBar, { SideBarMenu, SideBarSubMenu, SideBarItem } from 'components/layout/SideBar';
 

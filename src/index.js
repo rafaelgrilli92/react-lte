@@ -6,10 +6,10 @@ import ReactDOM from 'react-dom';
 //import configureStore from 'store/configureStore'
 
 // All Scripts and Styles
-import 'containers/Scripts'
+import 'containers/scripts'
 
 // Routes
-import Routes from 'containers/Routes'
+import Routes from 'containers/routes'
 
 //var store = configureStore();
 

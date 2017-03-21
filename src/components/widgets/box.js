@@ -1,15 +1,15 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 
-import Icon from 'components/popular/Icon';
+import Icon from 'components/popular/icon';
 
 var _collapsable, _collapsed, _removable;
 
-const Box = ({children, collapsable, collapsed, color, isLoading, removable, solidColor}) => {
+const Box = ({children, collapsable, collapsed, color = 'default', isLoading, removable, solidColor}) => {
   _collapsable = collapsable;
   _collapsed = collapsed;
   _removable = removable;
   return (
-    <div className={"box box-" + color + (solidColor ? " box-solid" : "") + (_collapsed ? " collapsed-box" : "")}>
+    <div className={`box box-${color} ${solidColor ? "box-solid" : ""} ${_collapsed ? "collapsed-box" : ""}`}>
       { children }
       { isLoading && (<div className="overlay"><Icon name="refresh" modifier="fa-spin"/></div>) }
     </div>
@@ -23,12 +23,10 @@ Box.propTypes = {
   removable: PropTypes.bool,
   solidColor: PropTypes.bool
 }
-export default Box;
-
 
 const BoxHeader = ({children, bordered = true}) => {
   return (
-    <div className={"box-header" + (bordered ? " with-border" : "")}>
+    <div className={`box-header ${bordered ? "with-border" : ""}`}>
       <h3 className="box-title">
         { children }
       </h3>
@@ -50,20 +48,8 @@ const BoxHeader = ({children, bordered = true}) => {
 }
 BoxHeader.propTypes = { bordered: PropTypes.bool };
 
-const BoxBody = ({children}) => {
-  return (
-    <div className="box-body">
-      { children }
-    </div>
-  );
-}
+const BoxBody = ({children}) => <div className="box-body">{ children }</div>;
+const BoxFooter = ({children}) => <div className="box-footer">{ children }</div>;
 
-const BoxFooter = ({children}) => {
-  return (
-    <div className="box-footer">
-      { children }
-    </div>
-  );
-}
-
-export { BoxHeader, BoxBody };
+export default Box;
+export { BoxHeader, BoxBody, BoxFooter };

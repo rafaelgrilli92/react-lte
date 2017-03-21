@@ -6,10 +6,11 @@ import ContentHeader from 'components/layout/ContentHeader';
 import ContentBody from 'components/layout/ContentBody';
 
 // Widgets
-import Box, { BoxHeader, BoxBody, BoxFooter } from 'components/widgets/Box';
-import InfoBox from 'components/widgets/InfoBox';
-import SmallBox, { SmallBoxFooter } from 'components/widgets/SmallBox';
+import Box, { BoxHeader, BoxBody, BoxFooter } from 'components/widgets/box';
+import InfoBox from 'components/widgets/infoBox';
+import SmallBox, { SmallBoxFooter } from 'components/widgets/smallBox';
 
+import Button from 'components/uiElements/button';
 
 export default class Widgets extends Component {
   render() {
@@ -17,6 +18,18 @@ export default class Widgets extends Component {
       <div>
         <ContentHeader title="Widgets" />
         <ContentBody>
+        
+        <br />
+        <div className="row">
+          <div className="col-xs-12">
+            <Button />
+          </div>
+        </div>
+        <br />
+        <br />
+
+
+
           { /* INFO BOX */ }
           <div className="row">
             <div className="col-md-3 col-sm-6 col-xs-12">
@@ -36,22 +49,22 @@ export default class Widgets extends Component {
           { /* INFO BOX FULL COLERED */ }
           <div className="row">
             <div className="col-md-3 col-sm-6 col-xs-12">
-              <InfoBox title="bookmarks" text="41,410" icon="bookmark-o" fullColored="true">
+              <InfoBox title="bookmarks" text="41,410" icon="bookmark-o" fullColored={true}>
                 Progress Bar!
               </InfoBox>
             </div>
             <div className="col-md-3 col-sm-6 col-xs-12">
-              <InfoBox title="likes" text="41,410" icon="thumbs-o-up" color="green" fullColored="true">
+              <InfoBox title="likes" text="41,410" icon="thumbs-o-up" color="green" fullColored={true}>
                 Progress Bar!
               </InfoBox>
             </div>
             <div className="col-md-3 col-sm-6 col-xs-12">
-              <InfoBox title="events" text="41,410" icon="calendar" color="yellow" fullColored="true">
+              <InfoBox title="events" text="41,410" icon="calendar" color="yellow" fullColored={true}>
                 Progress Bar!
               </InfoBox>
             </div>
             <div className="col-md-3 col-sm-6 col-xs-12">
-              <InfoBox title="comments" text="41,410" icon="comments-o" color="red" fullColored="true">
+              <InfoBox title="comments" text="41,410" icon="comments-o" color="red" fullColored={true}>
                 Progress Bar!
               </InfoBox>
             </div>

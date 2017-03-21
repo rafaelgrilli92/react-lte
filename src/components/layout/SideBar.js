@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 
-import Icon from 'components/popular/Icon';
+import Icon from 'components/popular/icon';
 
 export default class SideBar extends Component {
   render() {

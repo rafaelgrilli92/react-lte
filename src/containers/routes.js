@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { browserHistory, IndexRoute, Router, Route } from 'react-router';
 
 // Main Component
-import App from 'components/App';
+import App from 'components/app';
 
 // Views
 import Home from 'views/Home';
