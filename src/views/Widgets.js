@@ -22,7 +22,7 @@ export default class Widgets extends Component {
         <br />
         <div className="row">
           <div className="col-xs-12">
-            <Button />
+            
           </div>
         </div>
         <br />
