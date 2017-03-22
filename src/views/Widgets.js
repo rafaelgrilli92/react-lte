@@ -8,7 +8,7 @@ import ContentBody from 'components/layout/ContentBody';
 // Widgets
 import Box, { BoxBody, BoxFooter } from 'components/widgets/Box';
 import InfoBox from 'components/widgets/InfoBox';
-import SmallBox, { SmallBoxFooter } from 'components/widgets/SmallBox';
+import SmallBox from 'components/widgets/SmallBox';
 
 
 export default class Widgets extends Component {
@@ -70,32 +70,16 @@ export default class Widgets extends Component {
           { /* SMALL BOX */ }
           <div className="row">
             <div className="col-lg-3 col-xs-6">
-              <SmallBox title="150" text="New Orders" icon="shopping-cart">
-                <SmallBoxFooter>
-                  More info <i className="fa fa-arrow-circle-right"></i>
-                </SmallBoxFooter>
-              </SmallBox>
+              <SmallBox title="150" text="New Orders" icon="shopping-cart" footer={<div>More info <i className="fa fa-arrow-circle-right"></i></div>} />
             </div>
             <div className="col-lg-3 col-xs-6">
-              <SmallBox title="53%" text="Bounce Rate" icon="bar-chart" color="green">
-                <SmallBoxFooter>
-                  More info <i className="fa fa-arrow-circle-right"></i>
-                </SmallBoxFooter>
-              </SmallBox>
+              <SmallBox title="53%" text="Bounce Rate" icon="bar-chart" color="green" footer={<div>More info <i className="fa fa-arrow-circle-right"></i></div>} />
             </div>
             <div className="col-lg-3 col-xs-6">
-              <SmallBox title="44" text="User Registrations" icon="user-plus" color="yellow">
-                <SmallBoxFooter>
-                  More info <i className="fa fa-arrow-circle-right"></i>
-                </SmallBoxFooter>
-              </SmallBox>
+              <SmallBox title="44" text="User Registrations" icon="user-plus" color="yellow" footer={<div>More info <i className="fa fa-arrow-circle-right"></i></div>} />
             </div>
             <div className="col-lg-3 col-xs-6">
-              <SmallBox title="65" text="Unique Visitors" icon="pie-chart" color="red">
-                <SmallBoxFooter>
-                  More info <i className="fa fa-arrow-circle-right"></i>
-                </SmallBoxFooter>
-              </SmallBox>
+              <SmallBox title="65" text="Unique Visitors" icon="pie-chart" color="red" footer={<div>More info <i className="fa fa-arrow-circle-right"></i></div>} />
             </div>
           </div>
           { /* END SMALL BOX */ }
