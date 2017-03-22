@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
-import Icon from 'components/uiElements/icon';
+import Icon from 'components/uiElements/Icon';
 
 export default class ContentHeader extends Component {
 	PropTypes = {

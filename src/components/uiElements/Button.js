@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import Icon from 'components/uiElements/icon';
+import Icon from 'components/uiElements/Icon';
 
 const Button = ({children, color = 'default', disabled, iconLeft, iconRight, modifier, text, type = 'button', onClick}) => {
 	return (

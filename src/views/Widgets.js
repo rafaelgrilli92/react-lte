@@ -6,11 +6,10 @@ import ContentHeader from 'components/layout/ContentHeader';
 import ContentBody from 'components/layout/ContentBody';
 
 // Widgets
-import Box, { BoxHeader, BoxBody, BoxFooter } from 'components/widgets/box';
-import InfoBox from 'components/widgets/infoBox';
-import SmallBox, { SmallBoxFooter } from 'components/widgets/smallBox';
+import Box, { BoxHeader, BoxBody, BoxFooter } from 'components/widgets/Box';
+import InfoBox from 'components/widgets/InfoBox';
+import SmallBox, { SmallBoxFooter } from 'components/widgets/SmallBox';
 
-import Input from 'components/forms/input';
 
 export default class Widgets extends Component {
   render() {
@@ -22,7 +21,7 @@ export default class Widgets extends Component {
         <br />
         <div className="row">
           <div className="col-xs-12">
-            <Input type="text" onChange={(e) => console.log(e.target.value)} placeholder="Digite aqui" />
+            
           </div>
         </div>
         <br />
