@@ -6,7 +6,7 @@ import ContentHeader from 'components/layout/ContentHeader';
 import ContentBody from 'components/layout/ContentBody';
 
 // Widgets
-import Box, { BoxHeader, BoxBody, BoxFooter } from 'components/widgets/Box';
+import Box, { BoxBody, BoxFooter } from 'components/widgets/Box';
 import InfoBox from 'components/widgets/InfoBox';
 import SmallBox, { SmallBoxFooter } from 'components/widgets/SmallBox';
 
@@ -102,27 +102,23 @@ export default class Widgets extends Component {
           { /* BOX */ }
           <div className="row">
             <div className="col-lg-3 col-md-6 col-md col-xs-12">
-              <Box collapsable={true} collapsed={true} color="primary">
-                <BoxHeader>Collapsed</BoxHeader>
-                <BoxBody>The body of the box</BoxBody>
+              <Box header="Collapsed" collapsable={true} collapsed={true} color="primary">
+                The body of the box
               </Box>
             </div>
             <div className="col-lg-3 col-md-6 col-xs-12">
-              <Box title="Collapsable" collapsable={true} color="warning">
-                <BoxHeader>Collapsable</BoxHeader>
-                <BoxBody>The body of the box</BoxBody>
+              <Box header="Collapsable" collapsable={true} color="warning">
+                The body of the box
               </Box>
             </div>
             <div className="col-lg-3 col-md-6 col-xs-12">
-              <Box title="Removable" color="success" removable={true}>
-                <BoxHeader>Removable</BoxHeader>
-                <BoxBody>The body of the box</BoxBody>
+              <Box header="Removable" color="success" removable={true}>
+                The body of the box
               </Box>
             </div>
             <div className="col-lg-3 col-md-6 col-xs-12">
-              <Box title="Loading State" color="danger" isLoading={true}>
-                <BoxHeader>Loading State</BoxHeader>
-                <BoxBody>The body of the box</BoxBody>
+              <Box header="Loading State" color="danger" isLoading={true}>
+                The body of the box
               </Box>
             </div>
           </div>
@@ -130,27 +126,23 @@ export default class Widgets extends Component {
         { /* BOX SOLID */ }
           <div className="row">
             <div className="col-lg-3 col-md-6 col-xs-12">
-              <Box title="Collapsed" color="primary" collapsable={true} collapsed={true} solidColor={true}>
-                <BoxHeader>Collapsed</BoxHeader>
-                <BoxBody>The body of the box</BoxBody>
+              <Box header="Collapsed" color="primary" collapsable={true} collapsed={true} solidColor={true}>
+                The body of the box
               </Box>
             </div>
             <div className="col-lg-3 col-md-6 col-xs-12">
-              <Box title="Collapsable" color="warning" collapsable={true} solidColor={true}>
-                <BoxHeader>Collapsable</BoxHeader>
-                <BoxBody>The body of the box</BoxBody>
+              <Box header="Collapsable" color="warning" collapsable={true} solidColor={true}>
+                The body of the box
               </Box>
             </div>
             <div className="col-lg-3 col-md-6 col-xs-12">
-              <Box title="Removable" color="success" solidColor={true} removable={true}>
-                <BoxHeader>Removable</BoxHeader>
-                <BoxBody>The body of the box</BoxBody>
+              <Box header="Removable" color="success" solidColor={true} removable={true}>
+                The body of the box
               </Box>
             </div>
             <div className="col-lg-3 col-md-6 col-xs-12">
-              <Box title="Loading State" color="danger" solidColor={true} isLoading={true}>
-                <BoxHeader>Loading State</BoxHeader>
-                <BoxBody>The body of the box</BoxBody>
+              <Box header="Loading State" color="danger" solidColor={true} isLoading={true}>
+                The body of the box
               </Box>
             </div>
           </div>
