@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 //import { Link } from 'react-router';
 
-// Layout
-import ContentHeader from 'components/layout/ContentHeader';
-import ContentBody from 'components/layout/ContentBody';
-
 // Widgets
-import Box, { BoxBody, BoxFooter } from 'components/widgets/Box';
-import InfoBox from 'components/widgets/InfoBox';
-import SmallBox from 'components/widgets/SmallBox';
+import {
+  ContentHeader, 
+  ContentBody, 
+  InfoBox, 
+  SmallBox, 
+  Box
+} from '../components/';
 
 
 export default class Widgets extends Component {
   render() {
     return (
       <div>
-        <ContentHeader title="Widgets" />
+        <ContentHeader title="Widgets" enableReactRouterLink={true} />
         <ContentBody>
         
         <br />

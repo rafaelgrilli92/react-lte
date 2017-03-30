@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 
-import Icon from 'components/uiElements/Icon';
+import { Icon } from '../index';
 
 const propTypes = {
   color: PropTypes.string, // aqua (default), green, yellow, red

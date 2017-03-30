@@ -8,7 +8,7 @@ export default class Dashboard1 extends Component {
   render() {
     return (
       <div>
-        <ContentHeader title="Dashboard 1"/>
+        <ContentHeader title="Dashboard 1" enableReactRouterLink={true}/>
       </div>
     );
   }

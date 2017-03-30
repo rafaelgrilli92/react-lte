@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { browserHistory, IndexRoute, Router, Route } from 'react-router';
 
 // Main Component
-import App from 'components/app';
+import App from '../app';
 
 // Views
-import Home from 'views/Home';
+import Home from '../views/Home';
 //import Dashboard1 from 'components/views/Dashboard1';
-import Widgets from 'views/Widgets';
+import Widgets from '../views/Widgets';
 
 class Routes extends Component {
 	render() {

@@ -1,93 +1,70 @@
 import React, { Component, PropTypes } from 'react';
 
-import Icon from 'components/uiElements/Icon';
+import { Icon } from '../';
 
-export default class SideBar extends Component {
-  render() {
+const SideBar = ({children}) => {
     return (
       <div>
         <aside className="main-sidebar">
           <section className="sidebar">
-            { this.props.children }
+            { children }
           </section>
         </aside>
       </div>
     );
-  }
 }
 
-export class SideBarMenu extends Component {
-  PropTypes = {
-    title: PropTypes.string
-  }
-
-  render() {
-    let { title } = this.props;
-
+const SideBarMenu = ({ children, title }) => {
     return (
       <ul className="sidebar-menu">
         { title ? (<li className="header">{ title }</li>) : ""}
-        { this.props.children }
+        { children }
       </ul>
     );
-  }
 }
 
-export class SideBarSubMenu extends Component {
-  PropTypes = {
-    icon: PropTypes.string,
-    path: PropTypes.string.isRequired,
-    text: PropTypes.string 
-  }
+SideBarMenu.propTypes = {
+  title: PropTypes.string
+};
 
-  render() {
-    var { icon, text } = this.props;
-
+const SideBarSubMenu = ({ children, icon, text, items }) => {
     return (
        <li className="treeview">
         <a href="#">
-            { icon ? (<Icon name={icon} fixedWidth={true} />) : "" }&nbsp;<span>{ text }</span>
+          { icon ? (<Icon name={icon} fixedWidth={true} />) : "" }&nbsp;
+          <span>{ text }</span>
           <span className="pull-right-container">
             <Icon name="angle-right" pull="right" />
           </span>
         </a>
         <ul className="treeview-menu">
-          { this.props.children }
+          { children }
         </ul>
       </li>
     );
-  }
 }
 
+SideBarSubMenu.propTypes = {
+  icon: PropTypes.string,
+  text: PropTypes.string.isRequired
+};
 
-export class SideBarItem extends Component {
-  render() {
-    return (
-        <li>{ this.props.children }</li>
-    );
-  }
+const SideBarItem = ({children}) => <li>{ children }</li>;
+
+const SideBarLink = ({ icon, path, text }) => {
+  return (
+    <a href={path || "#"}>
+      <span> 
+        { icon ? (<Icon name={icon} fixedWidth={true} />) : "" }&nbsp;{ text }
+      </span>
+    </a>
+  )
 }
 
-export class SideBarLink extends Component {
-  PropTypes = {
-    icon: PropTypes.string,
-    path: PropTypes.string.isRequired,
-    text: PropTypes.string 
-  }
-
-  render() {
-    var { icon, path, text } = this.props;
-
-    var renderLinkContent = () => {
-      return (
-        <span> 
-          { icon ? (<Icon name={icon} fixedWidth={true} />) : "" }&nbsp;{ text }
-        </span>
-      )
-    }
-
-    return (
-      <a href={path}>{ renderLinkContent() }</a>
-    );
-  }
+SideBarLink.propTypes = {
+  icon: PropTypes.string,
+  path: PropTypes.string,
+  text: PropTypes.string 
 }
+
+export { SideBar as default, SideBarMenu, SideBarSubMenu, SideBarItem, SideBarLink };

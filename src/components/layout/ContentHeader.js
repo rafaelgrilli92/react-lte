@@ -1,23 +1,33 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 
-import Icon from 'components/uiElements/Icon';
+import { Icon } from '../';
 
-export default class ContentHeader extends Component {
-	PropTypes = {
-		breadcrumb: PropTypes.bool, 
-		subtitle: PropTypes.string,
-		title: PropTypes.string.isRequired
-	}
-	
+const propTypes = {
+	breadcrumb: PropTypes.bool, 
+	enableReactRouterLink: PropTypes.bool,
+	subtitle: PropTypes.string,
+	title: PropTypes.string.isRequired
+}
+
+const defaultProps = {
+	breadcrumb: true
+}
+
+class ContentHeader extends Component {	
 	renderBreadcrumbs() {
-		var breadcrumbs = window.location.pathname.split('/').slice(1);
+		const breadcrumbs = window.location.pathname.split('/').slice(1);
+		const { enableReactRouterLink } = this.props;
 		return breadcrumbs.map((link, index) => {
 			if (link !== "") {
 				if (index === breadcrumbs.length - 1)
 					return (<li key={index} className="active">{ link.charAt(0).toUpperCase() + link.slice(1) }</li>);
 				else
-					return ( <li key={index}><Link to={ link }>{ link.charAt(0).toUpperCase() + link.slice(1) }</Link></li>);
+					return enableReactRouterLink ? (
+						<li key={index}><Link to={ link }>{ link.charAt(0).toUpperCase() + link.slice(1) }</Link></li>
+					) : (
+						<li key={index}><a href={ link }>{ link.charAt(0).toUpperCase() + link.slice(1) }</a></li>
+					)
 			} else {
 				return "";
 			}
@@ -25,8 +35,8 @@ export default class ContentHeader extends Component {
 	}
 
   render() {
-  	var {
-  		breadcrumb = true,
+  	const {
+  		breadcrumb,
   		title,
   		subtitle
 		} = this.props;
@@ -48,3 +58,8 @@ export default class ContentHeader extends Component {
     );
   }
 }
+
+ContentHeader.propTypes = propTypes;
+ContentHeader.defaultProps = defaultProps;
+
+export default ContentHeader;

@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import classNames from 'classnames';
 
-import Icon from 'components/uiElements/Icon';
+import { Icon } from '../index';
 
 const propTypes = {
   bordered: PropTypes.bool,

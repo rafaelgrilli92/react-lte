@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { Link, IndexLink } from 'react-router';
 
-import Avatar from 'images/avatar.png';
+import Avatar from './images/avatar.png';
 
-import Icon from 'components/uiElements/Icon';
-import Navbar from 'components/layout/Navbar';
-import SideBar, { SideBarMenu, SideBarSubMenu, SideBarItem } from 'components/layout/SideBar';
+import { Navbar, SideBar, SideBarMenu, SideBarSubMenu, SideBarItem, Icon } from './components/';
 
 class App extends Component {
   render() {

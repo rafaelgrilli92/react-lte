@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 // Images
-import avatar from 'images/avatar.png';
+import avatar from '../../images/avatar.png';
 
 
 export default class Navbar extends Component {
