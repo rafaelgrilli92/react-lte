@@ -5,6 +5,7 @@ export { default as Navbar } from  './layout/Navbar';
 export { default as SideBar, SideBarMenu, SideBarSubMenu, SideBarItem } from  './layout/SideBar';
 
 // UI Elements
+export { default as Alert } from  './uiElements/Alert';
 export { default as Callout } from  './uiElements/Callout';
 export { default as Icon } from  './uiElements/Icon';
 

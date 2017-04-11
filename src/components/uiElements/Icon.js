@@ -3,10 +3,10 @@ import classNames from 'classnames';
 
 const propTypes = {
 	name: PropTypes.string.isRequired,
-	modifier: PropTypes.string
+	cssModifier: PropTypes.string
 }
 
-const Icon = ({name, modifier}) => <i className={classNames('fa', `fa-${name}`, modifier)}></i>;
+const Icon = ({name, cssModifier}) => <i className={classNames('fa', `fa-${name}`, cssModifier)}></i>;
 Icon.propTypes = propTypes;
 
 export default Icon;

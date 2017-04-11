@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 // Widgets
 import {
+  Alert,
   Callout,
   ContentHeader, 
   ContentBody, 
@@ -22,9 +23,9 @@ export default class Widgets extends Component {
         <br />
         <div className="row">
           <div className="col-xs-12">
-            <Callout icon="remove" title="Error" color="warning">
+            <Alert icon="remove" title="Error" color="info">
               Something went wrong :(
-            </Callout>
+            </Alert>
           </div>
         </div>
         <br />

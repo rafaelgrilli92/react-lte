@@ -85,7 +85,7 @@ class Box extends Component {
           { children }
         </div>
         { footer && this.renderFooter() }
-        { isLoading && (<div className="overlay"><Icon name="refresh" modifier="fa-spin"/></div>) }
+        { isLoading && (<div className="overlay"><Icon name="refresh" cssModifier="fa-spin"/></div>) }
       </div>
     );
   }
