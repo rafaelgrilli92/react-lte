@@ -7,7 +7,8 @@ import {
   ContentBody, 
   InfoBox, 
   SmallBox, 
-  Box
+  Box,
+  UserBox
 } from '../components/';
 
 // UiElements
@@ -28,9 +29,9 @@ export default class Widgets extends Component {
         <br />
         <div className="row">
           <div className="col-xs-12">
-            <ProgressBar vertical={true} color="success" active={true} valueNow={9} showProgressLabel={true}>
-              10 %
-            </ProgressBar>
+            <UserBox color="success">
+
+            </UserBox>
           </div>
         </div>
         <br />

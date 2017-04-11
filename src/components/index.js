@@ -14,3 +14,4 @@ export { default as ProgressBar } from  './uiElements/ProgressBar';
 export { default as Box } from './widgets/Box';
 export { default as InfoBox } from './widgets/InfoBox';
 export { default as SmallBox } from  './widgets/SmallBox';
+export { default as UserBox } from  './widgets/UserBox';
