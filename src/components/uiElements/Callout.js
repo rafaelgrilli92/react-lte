@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import classNames from 'classNames';
 import { Icon } from '../index';
 
 const propTypes = {
@@ -22,11 +23,16 @@ const defaultProps = {
 	color: 'danger'
 }
 
-const Callout = props => {
+const Callout = ({
+	title,
+	icon,
+	color,
+	children
+}) => {
 	return (
-		<div className={("callout callout-" + props.color)}>
-      { props.title && <h4>{ props.icon && <Icon name={props.icon}/> } { props.title }</h4> }
-      { props.children && <p>{props.children}</p> }
+		<div className={classNames('callout', `callout-${color}`)}>
+      { title && <h4>{ icon && <Icon name={icon}/> } { title }</h4> }
+      { children && <p>{children}</p> }
 	  </div>
 	)
 }
