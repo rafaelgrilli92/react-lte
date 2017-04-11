@@ -2,6 +2,12 @@ import React, { PropTypes } from 'react';
 import classNames from 'classnames';
 
 const propTypes = {
+    
+    /**
+     * Sets the bar to vertical mode
+     */
+    vertical: PropTypes.bool,
+
     /**
      * Current progress value
      */
@@ -46,6 +52,7 @@ const defaultProps = {
 }
 
 const ProgressBar = ({
+    vertical,
     valueNow,
     valueMin,
     valueMax,
@@ -61,7 +68,8 @@ const ProgressBar = ({
             classNames(
                 'progress',
                 {[`progress-${size}`]: size},
-                {'active': active}
+                {'active': active},
+                {'vertical': vertical}
              )
         }>
             <div className={
@@ -72,12 +80,12 @@ const ProgressBar = ({
                 )
             } 
             role="progressbar" aria-valuenow={valueNow} aria-valuemin={valueMin}
-            aria-valuemax={valueMax} style={{width: `${valueNow}%`}}
+            aria-valuemax={valueMax} style={{[(vertical ? 'height' : 'width')]: `${valueNow}%`}}
             >
                 { 
                     !size && (
                         showProgressLabel ? (
-                            <span>{ `${valueNow} %` }</span>
+                            <span>{ `${valueNow}%` }</span>
                         ) : (
                             <span>{ children }</span>
                         )

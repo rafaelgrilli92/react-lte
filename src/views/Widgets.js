@@ -28,7 +28,7 @@ export default class Widgets extends Component {
         <br />
         <div className="row">
           <div className="col-xs-12">
-            <ProgressBar color="success" active={true} size="sm" valueNow={30} showProgressLabel={true}>
+            <ProgressBar vertical={true} color="success" active={true} valueNow={9} showProgressLabel={true}>
               10 %
             </ProgressBar>
           </div>
