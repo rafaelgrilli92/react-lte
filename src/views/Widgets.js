@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 // Widgets
 import {
+  Callout,
   ContentHeader, 
   ContentBody, 
   InfoBox, 
@@ -21,7 +22,9 @@ export default class Widgets extends Component {
         <br />
         <div className="row">
           <div className="col-xs-12">
-            
+            <Callout icon="remove" title="Error">
+              Something went wrong :(
+            </Callout>
           </div>
         </div>
         <br />

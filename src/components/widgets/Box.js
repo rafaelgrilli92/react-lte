@@ -76,7 +76,8 @@ class Box extends Component {
       header,
       isLoading, 
       removable, 
-      solidColor} = this.props;
+      solidColor
+    } = this.props;
     return (
       <div className={classNames('box', `box-${color}`, {'box-solid': solidColor}, {'collapsed-box': collapsed})}>
         { header && this.renderHeader() }

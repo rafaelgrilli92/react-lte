@@ -1,23 +1,37 @@
 import React, { PropTypes } from 'react';
+import { Icon } from '../index';
 
-const InfoBox = ({children, color = 'aqua', fullColored, icon, title, text}) => {
-  return (
-    <div className={`info-box ${fullColored ? `bg-${color}` : ""}`}>
-      <span className={`info-box-icon ${!fullColored ? `bg-${color}` : ""}`}><i className={(icon ? 'fa fa-' + icon : '')}></i></span>
-      <div className="info-box-content">
-        <span className="info-box-text">{ title }</span>
-        <span className="info-box-number">{ text }</span>
-        { children }
-      </div>
-    </div>
-  );
-}
-InfoBox.propTypes = {
-  color: PropTypes.string, // aqua (default), green, yellow, red
-  fullColored: PropTypes.bool,
-  icon: PropTypes.string, // just font-awesome name e.g.: envelope-o
-  title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired
+const propTypes = {
+	/*
+  * Sets the title
+  */
+	title: PropTypes.string,
+	
+	/*
+  * Sets the title's icon on the left position
+  */
+	icon: PropTypes.string,
+
+	/*
+  * Sets the component color
+  */
+	color: PropTypes.oneOf(['danger', 'info', 'warning', 'success']),
+};
+
+const defaultProps = {
+	color: 'danger'
 }
 
-export default InfoBox;
+const Callout = props => {
+	return (
+		<div className={("callout callout-" + props.color)}>
+      { props.title && <h4>{ props.icon && <Icon name={props.icon}/> } { props.title }</h4> }
+      { props.children && <p>{props.children}</p> }
+	  </div>
+	)
+}
+
+Callout.propTypes = propTypes;
+Callout.defaultProps = defaultProps;
+
+export default Callout;

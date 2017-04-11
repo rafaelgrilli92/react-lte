@@ -28,6 +28,7 @@ const InfoBox = ({children, color, fullColored, icon, title, text}) => {
     </div>
   );
 }
+
 InfoBox.propTypes = propTypes;
 InfoBox.defaultProps = defaultProps;
 
