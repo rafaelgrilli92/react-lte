@@ -3,13 +3,18 @@ import React, { Component } from 'react';
 
 // Widgets
 import {
-  Alert,
-  Callout,
   ContentHeader, 
   ContentBody, 
   InfoBox, 
   SmallBox, 
   Box
+} from '../components/';
+
+// UiElements
+import {
+  Alert,
+  Callout,
+  ProgressBar
 } from '../components/';
 
 
@@ -23,9 +28,9 @@ export default class Widgets extends Component {
         <br />
         <div className="row">
           <div className="col-xs-12">
-            <Alert icon="remove" title="Error" color="info">
-              Something went wrong :(
-            </Alert>
+            <ProgressBar color="success" active={true} size="sm" valueNow={30} showProgressLabel={true}>
+              10 %
+            </ProgressBar>
           </div>
         </div>
         <br />

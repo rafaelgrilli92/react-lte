@@ -8,6 +8,7 @@ export { default as SideBar, SideBarMenu, SideBarSubMenu, SideBarItem } from  '.
 export { default as Alert } from  './uiElements/Alert';
 export { default as Callout } from  './uiElements/Callout';
 export { default as Icon } from  './uiElements/Icon';
+export { default as ProgressBar } from  './uiElements/ProgressBar';
 
 // Widgets
 export { default as Box } from './widgets/Box';
