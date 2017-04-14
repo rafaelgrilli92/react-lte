@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-// Images
-import avatar from '../../images/avatar.png';
-
-
 export default class Navbar extends Component {
   render() {
     return (
@@ -99,12 +95,12 @@ export default class Navbar extends Component {
                       </li>
                       <li className="dropdown user user-menu">
                         <a href="#" className="dropdown-toggle" data-toggle="dropdown">
-                          <img src={avatar} className="user-image" alt="User"/>
+                          <img src="avatar.png" className="user-image" alt="User"/>
                           <span className="hidden-xs">Rafael Grilli</span>
                         </a>
                         <ul className="dropdown-menu">
                           <li className="user-header">
-                            <img src={avatar} className="img-circle" alt="User"/>
+                            <img src="avatar.png" className="img-circle" alt="User"/>
                             <p>
                               <b>Rafael Grilli</b><br/> 
                               Programmer

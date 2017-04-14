@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Link, IndexLink } from 'react-router';
 
-import Avatar from './images/avatar.png';
-
 import { Navbar, SideBar, SideBarMenu, SideBarSubMenu, SideBarItem, Icon } from './components/';
 
 class App extends Component {
@@ -13,7 +11,7 @@ class App extends Component {
         <SideBar>
           <div className="user-panel">
             <div className="pull-left image">
-              <img src={Avatar} className="img-circle" alt="User"/>
+              <img src="avatar.png" className="img-circle" alt="User"/>
             </div>
             <div className="pull-left info">
               <p>Rafael Grilli</p>
@@ -23,12 +21,6 @@ class App extends Component {
             </div>
           </div>
           <SideBarMenu title="MAIN NAVIGATION">
-            {/* === DASHBOARDS === */}
-            <SideBarSubMenu icon="dashboard" text="Dashboard">
-              <SideBarItem><Link to="/dashboard/v1"><Icon name="circle-o"/> <span>Dashboard v1</span></Link></SideBarItem>
-              <SideBarItem><Link to="/dashboard/v2"><Icon name="circle-o"/> <span>Dashboard v2</span></Link></SideBarItem>
-            </SideBarSubMenu>
-            {/* === END DASHBOARDS === */}
             <SideBarItem><IndexLink to="/widgets"><Icon name="th" fixedWidth={true}/> <span>Widgets</span></IndexLink></SideBarItem>
           </SideBarMenu>
         </SideBar>

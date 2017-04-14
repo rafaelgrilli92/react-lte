@@ -29,7 +29,7 @@ export default class Widgets extends Component {
         <br />
         <div className="row">
           <div className="col-xs-12">
-            <UserBox color="success">
+            <UserBox color="aqua-active" picturePath="/avatar.png">
 
             </UserBox>
           </div>
